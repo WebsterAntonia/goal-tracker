@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { useAccount, useWaitForTransactionReceipt, useWriteContract } from "wagmi";
 import { CONTRACT_ADDRESS, GOAL_TRACKER_ABI } from "@/lib/goal-data";
+import { TRACKING_APP_ID, APP_NAME } from "@/lib/base-app";
 import { trackTransaction } from "@/utils/track";
 
 export function GoalComposer() {
@@ -11,6 +12,7 @@ export function GoalComposer() {
   const [name, setName] = useState("");
   const [target, setTarget] = useState("12");
   const [status, setStatus] = useState("Ready to launch a new goal track.");
+  const trackedHashRef = useRef<string | null>(null);
   const { data, isPending, writeContract } = useWriteContract();
   const receipt = useWaitForTransactionReceipt({
     hash: data,
@@ -18,10 +20,12 @@ export function GoalComposer() {
   });
 
   useEffect(() => {
-    if (receipt.data?.transactionHash) {
-      setStatus("Goal created and synced.");
-      trackTransaction("app-029", "goal-tracker", address, receipt.data.transactionHash);
-    }
+    const txHash = receipt.data?.transactionHash;
+    if (!txHash || trackedHashRef.current === txHash) return;
+
+    trackedHashRef.current = txHash;
+    setStatus("Goal created and synced.");
+    trackTransaction(TRACKING_APP_ID, APP_NAME, address, txHash);
   }, [address, receipt.data?.transactionHash]);
 
   useEffect(() => {

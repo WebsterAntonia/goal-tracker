@@ -1,13 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useAccount, useWaitForTransactionReceipt, useWriteContract } from "wagmi";
 import { CONTRACT_ADDRESS, GOAL_TRACKER_ABI } from "@/lib/goal-data";
+import { TRACKING_APP_ID, APP_NAME } from "@/lib/base-app";
 import { trackTransaction } from "@/utils/track";
 
 export function AddProgressButton({ disabled }: { disabled?: boolean }) {
   const { address } = useAccount();
   const [feedback, setFeedback] = useState("Ready to push the count forward.");
+  const trackedHashRef = useRef<string | null>(null);
   const { data, isPending, writeContract } = useWriteContract();
   const receipt = useWaitForTransactionReceipt({
     hash: data,
@@ -15,10 +17,12 @@ export function AddProgressButton({ disabled }: { disabled?: boolean }) {
   });
 
   useEffect(() => {
-    if (receipt.data?.transactionHash) {
-      setFeedback("Progress updated.");
-      trackTransaction("app-029", "goal-tracker", address, receipt.data.transactionHash);
-    }
+    const txHash = receipt.data?.transactionHash;
+    if (!txHash || trackedHashRef.current === txHash) return;
+
+    trackedHashRef.current = txHash;
+    setFeedback("Progress updated.");
+    trackTransaction(TRACKING_APP_ID, APP_NAME, address, txHash);
   }, [address, receipt.data?.transactionHash]);
 
   useEffect(() => {
