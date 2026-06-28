@@ -102,3 +102,11 @@ Use `/insights` to explore progress-related insights.
 The app uses the Next.js App Router, so route files are expected to live under the app directory.
 
 Dynamic goal pages are handled with the `[id]` route segment.
+
+The primary user flow is centered on creating goals and updating their progress over time.
+
+## Development Notes
+
+Keep route behavior focused and predictable.
+
+Use TypeScript types for shared data structures where possible.
