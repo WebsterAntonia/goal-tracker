@@ -88,3 +88,11 @@ Start from the home page at `/`.
 Use `/create` to add a new goal.
 
 After a goal is created, view it from a route like:
+
+```text
+/goals/[id]
+```
+
+Use `/my` to review your goals.
+
+Use `/insights` to explore progress-related insights.
