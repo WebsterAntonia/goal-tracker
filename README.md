@@ -118,3 +118,11 @@ Prefer small components that map directly to the app鈥檚 main screens and acti
 When adding new pages, follow the existing route naming style.
 
 ## Scripts
+
+Common Next.js projects typically include scripts for development, building, and running the app.
+
+Check `package.json` for the exact scripts available in this repository.
+
+Typical commands may include:
+
+```bash
