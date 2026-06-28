@@ -36,3 +36,10 @@ It is designed around a small set of focused routes:
 ## Repository
 
 GitHub:
+
+https://github.com/WebsterAntonia/goal-tracker.git
+
+## Routes
+
+| Route | Purpose |
+| --- | --- |
