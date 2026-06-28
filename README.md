@@ -132,3 +132,11 @@ npm run start
 ```
 
 ## Contributing
+
+Contributions should keep the app simple, readable, and aligned with the current goal-tracking experience.
+
+Before opening a change, run the available project checks and confirm the main routes still work.
+
+Useful areas for improvement may include:
+
+- Refining the goal creation flow
