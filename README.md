@@ -43,3 +43,10 @@ https://github.com/WebsterAntonia/goal-tracker.git
 
 | Route | Purpose |
 | --- | --- |
+| `/` | Home page |
+| `/create` | Create a new goal |
+| `/goals/[id]` | View a specific goal |
+| `/my` | View personal goals |
+| `/insights` | View goal insights |
+
+## Getting Started
