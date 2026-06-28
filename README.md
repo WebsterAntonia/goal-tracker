@@ -27,3 +27,12 @@ It is designed around a small set of focused routes:
 - Uses Wagmi and Viem for Base-compatible web3 functionality
 
 ## Tech Stack
+
+- Next.js App Router
+- TypeScript
+- Wagmi
+- Viem
+
+## Repository
+
+GitHub:
