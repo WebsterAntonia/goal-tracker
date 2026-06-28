@@ -1,16 +1,7 @@
 # goal-tracker
 
-A Base Mini App for creating a goal and incrementing progress over time.
+`goal-tracker` is a Base Mini App for creating goals and incrementing progress over time.
 
-## Stack
-- Next.js App Router
-- TypeScript
-- Wagmi
-- Viem
+The app provides a simple structure for defining a goal, viewing goal details, tracking progress, and reviewing personal goal activity.
 
-## Routes
-- /
-- /create
-- /goals/[id]
-- /my
-- /insights
+## Overview
