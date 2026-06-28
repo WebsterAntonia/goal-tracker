@@ -50,3 +50,11 @@ https://github.com/WebsterAntonia/goal-tracker.git
 | `/insights` | View goal insights |
 
 ## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/WebsterAntonia/goal-tracker.git
+```
+
+Move into the project directory:
