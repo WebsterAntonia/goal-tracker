@@ -58,3 +58,11 @@ git clone https://github.com/WebsterAntonia/goal-tracker.git
 ```
 
 Move into the project directory:
+
+```bash
+cd goal-tracker
+```
+
+Install dependencies:
+
+```bash
