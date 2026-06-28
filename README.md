@@ -96,3 +96,9 @@ After a goal is created, view it from a route like:
 Use `/my` to review your goals.
 
 Use `/insights` to explore progress-related insights.
+
+## Project Structure
+
+The app uses the Next.js App Router, so route files are expected to live under the app directory.
+
+Dynamic goal pages are handled with the `[id]` route segment.
