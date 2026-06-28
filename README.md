@@ -80,3 +80,11 @@ Open the local development URL in your browser:
 ```text
 http://localhost:3000
 ```
+
+## Usage
+
+Start from the home page at `/`.
+
+Use `/create` to add a new goal.
+
+After a goal is created, view it from a route like:
