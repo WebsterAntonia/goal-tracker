@@ -140,3 +140,11 @@ Before opening a change, run the available project checks and confirm the main r
 Useful areas for improvement may include:
 
 - Refining the goal creation flow
+- Improving progress update interactions
+- Enhancing the goal detail page
+- Expanding the insights page
+- Improving layout and responsive styling
+
+## License
+
+No license information is provided in the original project description.
