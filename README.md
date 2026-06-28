@@ -126,3 +126,9 @@ Check `package.json` for the exact scripts available in this repository.
 Typical commands may include:
 
 ```bash
+npm run dev
+npm run build
+npm run start
+```
+
+## Contributing
