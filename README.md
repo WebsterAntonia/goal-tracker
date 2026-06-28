@@ -13,3 +13,10 @@ It is designed around a small set of focused routes:
 - Create a new goal
 - View an individual goal
 - Track progress over time
+- Browse your goals
+- Review insights
+
+## Features
+
+- Create a goal from the app interface
+- Increment progress on an existing goal
