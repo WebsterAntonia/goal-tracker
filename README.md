@@ -110,3 +110,11 @@ The primary user flow is centered on creating goals and updating their progress 
 Keep route behavior focused and predictable.
 
 Use TypeScript types for shared data structures where possible.
+
+Keep goal creation, goal detail, and progress update logic separated clearly.
+
+Prefer small components that map directly to the app鈥檚 main screens and actions.
+
+When adding new pages, follow the existing route naming style.
+
+## Scripts
